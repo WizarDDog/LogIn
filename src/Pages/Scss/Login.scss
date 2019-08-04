@@ -1,0 +1,81 @@
+// body {
+//     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../Shared/Icons/Layer_2.svg") no-repeat center center fixed; 
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     background-size: cover;
+// }
+
+.login {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../Shared/Icons/Layer_2.svg") no-repeat center center fixed;
+    background-size: cover;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+    .loginFailed {
+        font-size: 14px;
+        color: rgba(255,0,0,1);
+        width: 100%;
+        text-align:center;
+        padding-top: 50px;
+    }
+    .logo{
+        width: 246px;
+        height: 64px;
+        margin-top: 200px;
+        width: 100%;
+    }
+    .logoAndInputs {
+        position:absolute;
+        text-align: center;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        .inputs {
+            .username-container {
+                width: 359px;
+                height: 56px;
+                border-radius: 5px;
+                background-color: #ffffff;
+                margin: 20px 0px;
+                img {
+                    position: absolute;
+                    left: 0;
+                    height: 25px;
+                    padding: 15px;
+                }
+                .username, .password {
+                    width: 300px;
+                    border: none;
+                    height: 40px;
+                    margin-top: 8px;
+                    margin-left: 55px;
+                    font-size: 20px;
+                    color: rgb(128, 128, 128);
+                }
+                .username:focus, .password:focus {
+                    color: #999;
+                } 
+            }
+        }
+        .loginButton {
+            width: 360px;
+            height: 56px;
+            border-radius: 5px;
+            background-color: #9fd533;
+            font-size:  20px;
+            font-weight: 600;
+            color:  white;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .redBorder {
+            border: 1px solid rgba(255,0,0,0.5)
+        }
+        .loginButton:hover {
+            background-color: #86b300;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+    }
+}
