@@ -70,6 +70,9 @@
             color:  white;
             border: 1px solid rgba(255,255,255,0.5);
         }
+        .loginButton::-moz-focus-inner {
+          border: 0;
+        }
         .redBorder {
             border: 1px solid rgba(255,0,0,0.5)
         }

@@ -13,6 +13,15 @@ class ServerList extends Component  {
         };
     }
 
+    renderBackToLogin = () => {
+        if (this.props.values.Values[0] === undefined) {
+            this.props.history.push('/')
+            return false
+        } else {
+            return true
+        }
+    }
+
     render() {
         return (
             <div className="serverListAll">
@@ -21,12 +30,12 @@ class ServerList extends Component  {
                     <div className="serverList">SERVER</div>
                     <div className="distanceList">DISTANCE</div>
                 </div>
-                {this.props.values.Values.map((server, i)=> 
+                {this.renderBackToLogin() ? (this.props.values.Values.map((server, i)=> 
                     <div className="serverRow" key={i} >
                         <div className="serverName">{server.name}</div>
                         <div className="serverDistance">{server.distance} km</div>
                     </div>
-                )}
+                )) : <div/>}
             </div>
         );
     }

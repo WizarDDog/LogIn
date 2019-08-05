@@ -42,16 +42,20 @@ class Login extends Component  {
     }
 
     login = () => {
-        fetch('http://playground.tesonet.lt/v1/tokens', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            username: this.state.text,
-            password: this.state.password,
-        }),
-        }).then(
+        if (localStorage.getItem('myToken') !== null) {
+            this.getServers()
+        } else {
+            fetch('http://playground.tesonet.lt/v1/tokens', {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json',
+            },
+                body: JSON.stringify({
+                username: this.state.text,
+                password: this.state.password,
+            }),
+        })
+        .then(
             response => response.json(),
             error => console.log('An error occurred.', error)
         )
@@ -63,6 +67,7 @@ class Login extends Component  {
                 this.setState({loginFailed: true})
             }
         })
+        }
     }
 
     getServers = () => {

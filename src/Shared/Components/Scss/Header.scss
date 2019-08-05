@@ -20,5 +20,8 @@
         .logoutButton:hover {
             background-color: #99cc33;
         }
+        .logoutButton::-moz-focus-inner {
+            border: 0;
+          }
     }
 }
